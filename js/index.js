@@ -1,5 +1,5 @@
 /* API KEY value for airvisual data*/
-const AIR_API_KEY = "ENTER KEY HERE";
+const AIR_API_KEY = "dnMRPh6MdzuXWRGPn";
 
 /* location constants */
 const UCLA_LAT = 34.0689;
