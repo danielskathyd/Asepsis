@@ -1,4 +1,22 @@
-p {
+.myNavbar {
+  margin: 20px 70px 20px 70px;
+}
+
+.asepsis {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo {
+  margin: 0px;
+}
+
+ul {
+  color: white;
+}
+
+li {
+  display: inline;
 }
