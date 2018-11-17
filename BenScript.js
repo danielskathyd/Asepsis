@@ -4,9 +4,6 @@ const GOOGLE_API_KEY = "AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE";
 //map global variable--might move into initMap function later
 var map;
 
-//mark places
-var locations
-
 //ucla location
 var markUCLA = {
   lat: 34.070,
