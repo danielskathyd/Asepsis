@@ -4,20 +4,26 @@
   <title>Safety - Asepsis</title>
 
   <!-- BOOTSTRAP 4.1.3 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- STYLESHEETS -->
   <!-- STYLESHEETS -->
-  <link rel='stylesheet' type='text/css' href='../../css/safety.css' />
+  <link rel='stylesheet' type='text/css' href='../css/safety.css' />
+  <link rel='stylesheet' type='text/css' href='../css/style.css' />
 </head>
 <body>
   <div>
-    <h1 align="center">how do we measure air quality? </h1>
-   <img src="../images/safetyapi.png" style ="float: left"
-   width = "500" height ="300">
-    <p> AQI (air quality index)
-      <br><br>
+    <h1 class="header"align="center">how do we measure air quality? </h1>
+    <br>
+    <div class="col-sm-6">
+      <br>
+      <img src="../images/blank.png" class="center-block"
+      width = "300" height ="300">
+    </div>
+    <div class="col-sm-6">
+    <p align="justify" class="caption"> AQI (air quality index)</p>
+      <br>
+      <p align="justify">
       An air quality index (AQI) is a number used by government agencies
       to communicate to the public how polluted the air currently is or
       how polluted it is forecast to become. As the AQI increases, an
@@ -37,30 +43,36 @@
          <li>201 - 300: very unhealthy</li>
          <li>301 - 500: hazardous</li>
        </ul>
+     </div>
        <br>
-       <hr>
+       <hr class="line">
        <h1 align="center">protection</h1>
-       <table align="center" class="image">
-          <tr><td><img src="../images/safetyapi.png" width="300" height="300"></td>
-            <td><img src="../images/safetyapi.png" width="300" height="300"></td>
-            <td><img src="../images/safetyapi.png" width="300" height="300"></td>
-            <td><img src="../images/safetyapi.png" width="300" height="300"></td>
-          </tr>
-          <tr>
-            <td align="center">stay indoors</td>
-            <td align="center">wear a mask outdoors</td>
-            <td align="center">use an air purifier</td>
-            <td align="center">seek higher altitudes</td>
-          </tr>
-        </table>
+       <div class="col-sm-3">
+         <img src="../images/blank.png" class="center-block" width="200" height="200">
+         <p class="caption" align="center">stay indoors</p>
+       </div>
+       <div class="col-sm-3">
+         <img src="../images/blank.png" class="center-block" width="200" height="200">
+         <p class="caption" align="center">wear a mask outdoors</p>
+       </div>
+       <div class="col-sm-3">
+         <img src="../images/blank.png" class="center-block" width="200" height="200">
+         <p class="caption" align="center">use an air purifier</p>
+       </div>
+       <div class="col-sm-3">
+         <img src="../images/blank.png" class="center-block" width="200" height="200">
+         <p class="caption" align="center">seek higher altitudes</p>
+       </div>
         <br>
-        <hr>
+        <hr class="line">
         <h1 align="center">resources</h1>
-        <img src="../images/safetyapi.png" style ="float: left"
+        <div class = "col-sm-6">
+        <img src="../images/blank.png" class="center-block"
         width = "200" height ="200">
-        <br><br><br>
+      </div>
+      <div class="col-sm-6">
         <ul>
-          <li>Masks can be bought from hardware stores or online. The most
+          <li align="justify">Masks can be bought from hardware stores or online. The most
           effective masks are those with the words "particulate respirator",
         "NIOSH", and either "N95" or "P100" in its title.</li>
           <li>Air purifiers can be bought from Home Depot, Costcok, or
@@ -68,8 +80,9 @@
           <li><a href="https://airnow.gov/">AirNow</a> has updated information
           on the air quality in all regions.</li>
         </ul>
+      </div>
         <br><br><br><br>
-        <hr>
+        <hr class="line">
      </p>
     </div>
 </body>
