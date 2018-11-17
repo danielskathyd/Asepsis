@@ -4,7 +4,6 @@
   margin: 0px 300px;
   padding: 0px 50px;
   border-bottom: 1px solid white;
-  border-width: ;
 }
 
 .header {
@@ -35,4 +34,33 @@
 .mission-content {
   margin: 0px 300px;
   font-size: 13px;
+  padding: 0px 50px 30px 50px;
+  border-bottom: 1px solid white;
+}
+
+/* TEAM */
+
+.team {
+  margin-top: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: oblique;
+  margin-bottom: 30px;
+}
+
+.team-content {
+}
+
+.picture {
+  width: 50%;
+  margin-bottom: 3px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.year {
+  font-style: oblique;
 }
