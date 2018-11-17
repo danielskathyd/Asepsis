@@ -7,16 +7,22 @@
   font-size: 18px;
   font-weight: bold;
   color: white;
+  padding: 0px 3px 2px 0px;
+  border-bottom: 1px solid white;
+  margin-bottom: 0px;
 }
 
 .logo {
   margin: 0px;
 }
 
-ul {
+.nav-list {
+  padding-top: 17px;
   color: white;
 }
 
-li {
+.tab {
   display: inline;
+  padding: 15px;
+  font-weight: bold;
 }
