@@ -1,0 +1,12 @@
+.school-list {
+  padding-top: 30px;
+}
+
+.campus {
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 10px;
+  margin: 0px 500px 20px 500px;
+
+  transition: white 0.3s ease, color 0.3s ease;
+}
