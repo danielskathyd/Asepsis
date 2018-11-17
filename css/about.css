@@ -1,0 +1,38 @@
+/* DEFINITION */
+
+.intro {
+  margin: 0px 300px;
+  padding: 0px 50px;
+  border-bottom: 1px solid white;
+  border-width: ;
+}
+
+.header {
+  font-size: 25px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.pronounciation {
+  margin-bottom: 2px;
+}
+
+.definition {
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+/* MISSION */
+
+.mission {
+  margin-top: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: oblique;
+  margin-bottom: 2px;
+}
+
+.mission-content {
+  margin: 0px 300px;
+  font-size: 13px;
+}
