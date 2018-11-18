@@ -19,3 +19,16 @@
   background-color: white;
   color: #262647;
 }
+
+.info{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.info p{
+  color:black;
+  display:none;
+  background-color:white;
+  border-radius:10px;
+  padding: 20px;
+}

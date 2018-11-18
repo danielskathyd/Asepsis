@@ -1,5 +1,5 @@
 /* API KEY value for breezometer data*/
-const BREEZE_API_KEY = "c5a70ebf5e6a46fa8cc5233513585daf";
+const BREEZE_API_KEY = "ENTER API KEY HERE";
 
 /* location constants */
 const UCLA_LAT = 34.0689;
@@ -102,9 +102,14 @@ data();
 
 function displayInfo(text){
   var x = document.getElementById(text);
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
+  x.innerHTML = "<b>"+ text +" (" + myData[text].country_description+ ")</b>"
+                + "<br/><br/>AIR CONDITIONS: <br/> Air Quality Index: " + myData[text].country_aqi
+                +"<br/> <br/> CAUSES: <br/>"
+                + myData[text].dominant_pollutant_text.main
+                + myData[text].dominant_pollutant_text.causes;
+    if (x.style.display === "block") {
         x.style.display = "none";
+    } else {
+        x.style.display = "block";
     }
 }
