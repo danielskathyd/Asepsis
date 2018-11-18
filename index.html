@@ -14,45 +14,52 @@
 
     <!-- JAVASCRIPTS -->
     <script src="js/index.js"></script>
-    //for google map contains api key
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE&callback=initMap" async defer></script>
 
   </head>
 
   <body>
-    
-  <!-- NAVBAR -->
-  <div class='container-fluid myNavbar'>
-    <div class='container-fluid logo col-sm-6'>
-      <p class='asepsis'>a · s e p · s i s</p>
-      <p>breathe safe.</p>
-    </div>
-    <div class='nav-list text-right col-sm-6'>
-      <ul>
-        <div class='move'>
-        <li class='tab'> <a href='index.html'> map </a> </li>
+
+    <!-- NAVBAR -->
+    <div class='container-fluid myNavbar'>
+      <div class='container-fluid logo col-sm-6'>
+        <p class='asepsis'>a · s e p · s i s</p>
+        <p>breathe safe.</p>
       </div>
-      <div class='move'>
-        <li class='tab'> <a href='views/data.html'> data </a> </li>
+      <div class='nav-list text-right col-sm-6'>
+        <ul>
+          <div class='move'>
+            <li class='tab'> <a href='index.html'> map </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/data.html'> data </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/safety.html'> safety </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/about.html'> about </a> </li>
+          </div>
+        </ul>
       </div>
-      <div class='move'>
-        <li class='tab'> <a href='views/safety.html'> safety </a> </li>
-      </div>
-      <div class='move'>
-        <li class='tab'> <a href='views/about.html'> about </a> </li>
-      </div>
-      </ul>
+
     </div>
 
     <!-- GOOGLE MAP -->
-    <form class = 'container-fluid' id="mapContain">
-      <div class='container-fluid col-md-6' align='left' id="map"></div>
-      <div class='container-fluid col-md-6' id='mapInfo'>
-        AREA AQI: <p id='insertAQI'></p>
+    <form class='container-fluid' id="mapContain">
+      <div class='container-fluid col-md-6' id="map"></div>
+      <div align=center class='container-fluid col-md-6' id='mapInfo'>
+        <div align= center id="circle">
+          <br></br>
+          AREA AQI:
+          <p id='insertAQI'></p>
+        </div>
+        <br></br>
         AIR CONDITION: <p id='insertCOND'></p>
-        PRIMARY POLLUTANT: <p id='insertPOL'></p>
+        PRIMARY POLLUTION: <p id='insertPOL'></p>
       </div>
     </form>
 
   </body>
+
 </html>
