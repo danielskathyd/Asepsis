@@ -2,9 +2,9 @@
 const GOOGLE_API_KEY = "AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE";
 
 //map global variable--might move into initMap function later
-var map;
+//var map;
 
-var markers = [];
+//var markers = [];
 
 //map coordinates
 const UCLA_LAT = 34.0689;
@@ -40,7 +40,7 @@ var campuses = [
 
 //this function is automatically called when id=map object is created
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('map'), {
     //location of map center as it starts
     center: {
       lat: 36.011,
@@ -306,7 +306,7 @@ function setMarkers(map) {
        };
        for (var i = 0; i < campuses.length; i++) {
          var campus = campuses[i];
-         newMarker = new google.maps.Marker({
+         var newMarker = new google.maps.Marker({
            position: {lat: campus[1], lng: campus[2]},
            map: map,
            icon: image,
@@ -314,12 +314,11 @@ function setMarkers(map) {
            title: campus[0],
            zIndex: campus[3]
          });
-         markers.push(newMarker);
          //have all the buttons have this effect when clicked
          google.maps.event.addListener(newMarker,'click', function() {
                map.setCenter(this.getPosition());
                map.setZoom(8);
-               
+
         });
      }
    }
