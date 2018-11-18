@@ -1,9 +1,20 @@
-#map {
-padding-top: 10%;
-  height: 50%;
-  margin-left: 15%;
-  margin-right: 15%;
+#mapContain{
+  padding-top: 20;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 80%;
 }
+
+#map {
+  height: 100%;
+}
+
+#mapInfo{
+  display:none;
+  height: 100%;
+  color: white;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;

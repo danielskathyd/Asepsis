@@ -1,6 +1,6 @@
 /* API KEY value for breezometer data*/
-const BREEZE_API_KEY = "ENTER KEY HERE";
-const GOOGLE_API_KEY = "ENTER KEY HERE";
+const BREEZE_API_KEY = "";
+const GOOGLE_API_KEY = "";
 
 /* location constants */
 const UCLA_LAT = 34.0689;
@@ -21,7 +21,13 @@ const UCSB_LAT = 34.4208;
 const UCSB_LNG = -119.6982;
 const UCSC_LAT = 36.9916;
 const UCSC_LNG = -122.0583;
-const NUM_SCHOOLS = 9;
+//CHANGE BACK TO 9!!!
+const NUM_SCHOOLS = 9 ;
+
+//map variables
+var valAQI = 0;
+var valDescr = "";
+var valDomPol = "";
 
 var campuses = [
   ['UCLA', UCLA_LAT, UCLA_LNG, 9],
@@ -34,6 +40,8 @@ var campuses = [
   ['UCSB', UCSB_LAT, UCSB_LNG, 2],
   ['UCSC', UCSC_LAT, UCSC_LNG, 1],
 ];
+
+var map;
 
 /* variables */
 const myData = {};
@@ -109,9 +117,15 @@ async function data(){
   console.log(myData);
 }
 
+//display text on map once a marker is clicked
+function displayOnClick(){
+  var p = document.getElementById("mapInfo");
+  p.style.display = "block";
+}
+
 //this function is automatically called when id=map object is created
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     //location of map center as it starts
     center: {
       lat: 36.011,
@@ -375,8 +389,10 @@ function setMarkers(map) {
          coords: [1, 1, 1, 20, 18, 20, 18, 1],
          type: 'poly'
        };
+
+       var campus;
        for (var i = 0; i < campuses.length; i++) {
-         var campus = campuses[i];
+         campus = campuses[i];
          var newMarker = new google.maps.Marker({
            position: {lat: campus[1], lng: campus[2]},
            map: map,
@@ -389,8 +405,11 @@ function setMarkers(map) {
          google.maps.event.addListener(newMarker,'click', function() {
                map.setCenter(this.getPosition());
                map.setZoom(8);
-
-        });
+               document.getElementById("insertAQI").innerHTML = myData[this.getTitle()].breezometer_aqi;
+               document.getElementById("insertCOND").innerHTML = myData[this.getTitle()].breezometer_description;
+               document.getElementById("insertPOL").innerHTML = myData[this.getTitle()].dominant_pollutant_description;
+               displayOnClick();
+         });
      }
    }
 
