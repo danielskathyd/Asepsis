@@ -8,7 +8,7 @@
 }
 
 .style1 {
-    padding: 25px 120px 75px 100px;
+    padding: 0px 120px 75px 100px;
 }
 
 .caption {
@@ -21,4 +21,10 @@
     list-style-type: square;
     margin: 0;
     padding: 0;
+}
+
+.header {
+  font-size: 25px;
+  margin-bottom: 2px;
+  font-weight: bold;
 }
