@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 /* API KEY value for airvisual data*/
 const BREEZE_API_KEY = "ENTER_KEY_HERE";
+=======
+/* API KEY value for breezometer data*/
+const BREEZE_API_KEY = "ENTER KEY HERE";
+>>>>>>> 5a087ccc52fdecf442f5eb5a525a233b552de835
 
 /* location constants */
 const UCLA_LAT = 34.0689;
