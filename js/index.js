@@ -131,13 +131,13 @@ function circColor(aqi) {
   console.log(aqi);
   var p = document.getElementById('circle');
   if (aqi <= 50) {
-    p.style.background = 'green';
+    p.style.background = '#39ba40';
   } else if (aqi <= 100) {
     p.style.background = '#ffdf41';
   } else if (aqi <= 150) {
-    p.style.background = 'orange';
+    p.style.background = '#e6b132';
   } else {
-    p.style.background = 'red';
+    p.style.background = '#ba442f';
   }
 }
 
