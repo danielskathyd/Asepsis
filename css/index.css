@@ -1,15 +1,24 @@
-#mapContain{
+.header {
+  font-size: 25px;
+  font-weight: bold;
+}
+.caption {
+  padding-bottom: 30px;
+}
+
+#mapContain {
   padding-top: 20;
   padding-right: 100px;
   padding-left: 100px;
   height: 90%;
+  padding-bottom: 50px;
 }
 
 #map {
   height: 100%;
 }
 
-#mapInfo{
+#mapInfo {
   display: none;
   height: 100%;
   color: white;
@@ -19,17 +28,18 @@
 }
 
 #circle {
-    border-radius: 50%;
-    border-color: white;
-    width: 550px;
-    height: 550px;
-    background: none;
-    text-align: center;
-    font-size: 70px;
+  border-radius: 50%;
+  border-color: white;
+  width: 550px;
+  height: 550px;
+  background: none;
+  text-align: center;
+  font-size: 70px;
 }
 
 /* Optional: Makes the sample page fill the window. */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
