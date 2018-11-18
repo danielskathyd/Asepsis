@@ -1,5 +1,5 @@
 /* API KEY value for airvisual data*/
-const AIR_API_KEY = "dnMRPh6MdzuXWRGPn";
+const BREEZE_API_KEY = "ENTER_KEY_HERE";
 
 /* location constants */
 const UCLA_LAT = 34.0689;
@@ -20,9 +20,12 @@ const UCSB_LAT = 34.4208;
 const UCSB_LNG = -119.6982;
 const UCSC_LAT = 36.9916;
 const UCSC_LNG = -122.0583;
+const NUM_SCHOOLS = 9;
 
-/* store getData */
+/* variables */
 const myData = {};
+var numData = 0;
+var obtainedData = false;
 
 /* interface for connecting with API */
 var HttpClient = function() {
@@ -32,24 +35,21 @@ var HttpClient = function() {
             if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
                 aCallback(name, anHttpRequest.responseText);
         }
-
         anHttpRequest.open( "GET", aUrl, true );
-        anHttpRequest.send();
+        anHttpRequest.send(null);
     }
 }
 
-//function called after getting data from API
+/* function called after getting data from API */
 var storeData = function(name, data){
   try{
-    myData[name] = JSON.parse(data);
-    console.log("Data obtained for: " + name);
-  } catch(e) {
-      if (e instanceof SyntaxError) {
-          printError(e, true);
-      } else {
-          printError(e, false);
-      }
+    temp = JSON.parse(data);
+  }catch(e){
+    console.log("ERROR: Parsing");
   }
+  myData[name] = temp;
+  numData++;
+  console.log("Data obtained for: "+name);
 }
 
 function createElement(text){
@@ -58,17 +58,16 @@ function createElement(text){
   document.body.appendChild(div);
 }
 
-//creates client to work with API
+/* makes API connection w/airvisual API */
 var client = new HttpClient();
-
-//makes API connection w/airvisual API
 async function getData(name, lat, lng){
-  var url = 'http://api.airvisual.com/v2/nearest_city?lat=' + lat
+  var url = 'https://api.breezometer.com/baqi/?lat='+ lat
             + '&lon=' + lng
-            + '&key=' + AIR_API_KEY;
-  client.get(url, storeData, name);
+            + '&key=' + BREEZE_API_KEY;
+  await client.get(url, storeData, name);
 }
 
+/* get data for all uc campuses */
 async function getAllData(){
   await getData('UCLA', UCLA_LAT, UCLA_LNG);
   await getData('UCD', UCD_LAT,UCD_LNG);
@@ -79,6 +78,24 @@ async function getAllData(){
   await getData('UCSD', UCSD_LAT,UCSD_LNG);
   await getData('UCSB', UCSB_LAT,UCSB_LNG);
   await getData('UCSC', UCSC_LAT,UCSC_LNG);
+}
+
+/* pauses execution based on input */
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function data(){
+  /* wait for all data to be obtained */
+  while(!obtainedData){
+    if(numData == NUM_SCHOOLS){
+      obtainedData = true;
+    }
+    await sleep(1);
+  }
+
   console.log(myData);
 }
+
 getAllData();
+data();
