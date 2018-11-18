@@ -22,7 +22,8 @@ body {
 p,
 a,
 h1,
-ul {
+ul,
+button {
   color: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
