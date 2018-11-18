@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
   <title>Asepsis</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,7 +18,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE&callback=initMap" async defer></script>
 </head>
 <body>
-
+  
   <video autoplay loop id="video-background" muted plays-inline>
     <source src="background.mp4" type="video/mp4">
   </video>
@@ -38,22 +39,42 @@
       </div>
       <div class='move'>
         <li class='tab'> <a href='views/safety.html'> safety </a> </li>
+
       </div>
-      <div class='move'>
-        <li class='tab'> <a href='views/about.html'> about </a> </li>
+      <div class='nav-list text-right col-sm-6'>
+        <ul>
+          <div class='move'>
+            <li class='tab'> <a href='index.html'> map </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/data.html'> data </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/safety.html'> safety </a> </li>
+          </div>
+          <div class='move'>
+            <li class='tab'> <a href='views/about.html'> about </a> </li>
+          </div>
+        </ul>
       </div>
-      </ul>
+
     </div>
 
     <!-- GOOGLE MAP -->
-    <form class = 'container-fluid' id="mapContain">
-      <div class='container-fluid col-md-6' align='left' id="map"></div>
-      <div class='container-fluid col-md-6' id='mapInfo'>
-        AREA AQI: <p id='insertAQI'></p>
+    <form class='container-fluid' id="mapContain">
+      <div class='container-fluid col-md-6' id="map"></div>
+      <div align=center class='container-fluid col-md-6' id='mapInfo'>
+        <div align= center id="circle">
+          <br></br>
+          AREA AQI:
+          <p id='insertAQI'></p>
+        </div>
+        <br></br>
         AIR CONDITION: <p id='insertCOND'></p>
-        PRIMARY POLLUTANT: <p id='insertPOL'></p>
+        PRIMARY POLLUTION: <p id='insertPOL'></p>
       </div>
     </form>
 
   </body>
+
 </html>
