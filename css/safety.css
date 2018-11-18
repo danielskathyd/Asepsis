@@ -1,14 +1,12 @@
-
 .line {
-    border: 0;
-    width: 100%;
-    height: 1px;
-    background: white;
-
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
 }
 
 .style1 {
-    padding: 25px 120px 75px 100px;
+  padding: 0px 120px 75px 100px;
 }
 
 .caption {
@@ -17,10 +15,39 @@
   margin-bottom: 2px;
 }
 
-.styleone {
-    list-style-type: square;
-    margin: 0;
-    padding: 0;
+.description {
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+
+.icon {
+  width: 200px;
+}
+
+.house {
+  max-width: 100px;
+}
+
+.mask {
+  max-width: 67px;
+}
+
+.air {
+  max-width: 122px;
+}
+
+.mountain {
+  max-width: 178px;
+}
+
+.resources {
+  padding-top: 2px;
+  max-width: 120px;
+}
+
+.levels {
+  font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .header {

@@ -8,7 +8,7 @@
 
 .header {
   font-size: 25px;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
   font-weight: bold;
 }
 
@@ -28,7 +28,7 @@
   font-size: 25px;
   font-weight: bold;
   font-style: oblique;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 .mission-content {
@@ -49,18 +49,60 @@
 }
 
 .team-content {
+  padding: 0px 300px 50px 300px;
+}
+
+.center-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .picture {
-  width: 50%;
+  width: 100%;
   margin-bottom: 3px;
+  z-index: 1;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.hover-elements:hover .picture {
+  opacity: 0.5;
+}
+
+.hover-elements:hover .l-logo {
+  display: inline-block;
+}
+
+.hover-elements:hover .g-logo {
+  display: inline-block;
+}
+
+.g-logo {
+  display: none;
+  width: 25px;
+  top: 53px;
+  left: 53px;
+  position: absolute;
+  z-index: 2;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.l-logo {
+  display: none;
+  width: 30px;
+  top: 50px;
+  position: absolute;
+  z-index: 2;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .name {
   font-weight: bold;
+  font-size: 12px;
   margin-bottom: 2px;
 }
 
 .year {
   font-style: oblique;
+  font-size: 12px;
 }
