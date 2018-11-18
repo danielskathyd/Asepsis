@@ -1,8 +1,8 @@
 #mapContain{
   padding-top: 20;
-  padding-right: 15px;
-  padding-left: 15px;
-  height: 80%;
+  padding-right: 100px;
+  padding-left: 100px;
+  height: 90%;
 }
 
 #map {
@@ -10,9 +10,22 @@
 }
 
 #mapInfo{
-  display:none;
+  display: none;
   height: 100%;
   color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+#circle {
+    border-radius: 50%;
+    border-color: white;
+    width: 550px;
+    height: 550px;
+    background: none;
+    text-align: center;
+    font-size: 70px;
 }
 
 /* Optional: Makes the sample page fill the window. */

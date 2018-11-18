@@ -1,6 +1,6 @@
 /* API KEY value for breezometer data*/
-const BREEZE_API_KEY = "";
-const GOOGLE_API_KEY = "";
+const BREEZE_API_KEY = "b1db2002f7464d81a9707fb36213a0c3";
+const GOOGLE_API_KEY = "AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE";
 
 /* location constants */
 const UCLA_LAT = 34.0689;
@@ -121,6 +121,23 @@ async function data(){
 function displayOnClick(){
   var p = document.getElementById("mapInfo");
   p.style.display = "block";
+}
+
+function circColor(aqi) {
+  console.log(aqi);
+  var p = document.getElementById("circle");
+  if (aqi <= 50) {
+    p.style.background = "green";
+  }
+  else if(aqi <= 100) {
+    p.style.background = "yellow";
+  }
+  else if(aqi <= 150) {
+    p.style.background = "orange";
+  }
+  else {
+    p.style.background = "red";
+  }
 }
 
 //this function is automatically called when id=map object is created
@@ -405,10 +422,11 @@ function setMarkers(map) {
          google.maps.event.addListener(newMarker,'click', function() {
                map.setCenter(this.getPosition());
                map.setZoom(8);
-               document.getElementById("insertAQI").innerHTML = myData[this.getTitle()].breezometer_aqi;
-               document.getElementById("insertCOND").innerHTML = myData[this.getTitle()].breezometer_description;
+               document.getElementById("insertAQI").innerHTML = myData[this.getTitle()].country_aqi;
+               document.getElementById("insertCOND").innerHTML = myData[this.getTitle()].country_description;
                document.getElementById("insertPOL").innerHTML = myData[this.getTitle()].dominant_pollutant_description;
                displayOnClick();
+               circColor(myData[this.getTitle()].country_aqi);
          });
      }
    }
