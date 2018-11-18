@@ -1,0 +1,23 @@
+#mapContain{
+  padding-top: 20;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 80%;
+}
+
+#map {
+  height: 100%;
+}
+
+#mapInfo{
+  display:none;
+  height: 100%;
+  color: white;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
