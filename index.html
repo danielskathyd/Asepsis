@@ -11,8 +11,18 @@
   <link rel='stylesheet' type='text/css' href='css/index.css' />
   <link rel='stylesheet' type='text/css' href='css/navbar.css' />
   <link rel='stylesheet' type='text/css' href='css/style.css' />
+
+  <!-- JAVASCRIPTS -->
+  <script src="js/index.js"></script>
+  //for google map contains api key
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE&callback=initMap" async defer></script>
 </head>
 <body>
+
+  <video autoplay loop id="video-background" muted plays-inline>
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
   <!-- NAVBAR -->
   <div class='container-fluid myNavbar'>
     <div class='container-fluid logo col-sm-6'>
@@ -35,6 +45,16 @@
       </div>
       </ul>
     </div>
- </div>
-</body>
+
+    <!-- GOOGLE MAP -->
+    <form class = 'container-fluid' id="mapContain">
+      <div class='container-fluid col-md-6' align='left' id="map"></div>
+      <div class='container-fluid col-md-6' id='mapInfo'>
+        AREA AQI: <p id='insertAQI'></p>
+        AIR CONDITION: <p id='insertCOND'></p>
+        PRIMARY POLLUTANT: <p id='insertPOL'></p>
+      </div>
+    </form>
+
+  </body>
 </html>
