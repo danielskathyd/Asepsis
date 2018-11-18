@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="faviconasepsis.ico">
+  <title>Asepsis</title>
 
-  <head>
-    <title>Asepsis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- STYLESHEETS -->
+  <link rel='stylesheet' type='text/css' href='css/index.css' />
+  <link rel='stylesheet' type='text/css' href='css/navbar.css' />
+  <link rel='stylesheet' type='text/css' href='css/style.css' />
 
-    <!-- STYLESHEETS -->
-    <link rel='stylesheet' type='text/css' href='css/index.css' />
-    <link rel='stylesheet' type='text/css' href='css/navbar.css' />
-    <link rel='stylesheet' type='text/css' href='css/style.css' />
+  <!-- JAVASCRIPTS -->
+  <script src="js/index.js"></script>
+  //for google map contains api key
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE&callback=initMap" async defer></script>
+</head>
+<body>
+  
+  <video autoplay loop id="video-background" muted plays-inline>
+    <source src="background.mp4" type="video/mp4">
+  </video>
 
-    <!-- JAVASCRIPTS -->
-    <script src="js/index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE&callback=initMap" async defer></script>
+  <!-- NAVBAR -->
+  <div class='container-fluid myNavbar'>
+    <div class='container-fluid logo col-sm-6'>
+      <p class='asepsis'>a · s e p · s i s</p>
+      <p>breathe safe.</p>
+    </div>
+    <div class='nav-list text-right col-sm-6'>
+      <ul>
+        <div class='move'>
+        <li class='tab'> <a href='index.html'> map </a> </li>
+      </div>
+      <div class='move'>
+        <li class='tab'> <a href='views/data.html'> data </a> </li>
+      </div>
+      <div class='move'>
+        <li class='tab'> <a href='views/safety.html'> safety </a> </li>
 
-  </head>
-
-  <body>
-
-    <!-- NAVBAR -->
-    <div class='container-fluid myNavbar'>
-      <div class='container-fluid logo col-sm-6'>
-        <p class='asepsis'>a · s e p · s i s</p>
-        <p>breathe safe.</p>
       </div>
       <div class='nav-list text-right col-sm-6'>
         <ul>

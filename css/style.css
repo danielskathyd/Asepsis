@@ -1,11 +1,29 @@
 body {
-  background-color: #262647;
+  margin: 0;
+  padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background: #262647;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#video-background {
+  /*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
 }
 
 p,
 a,
 h1,
-ul {
+ul,
+button {
   color: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
