@@ -21,8 +21,22 @@
   color: white;
 }
 
+.move {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.move:hover {
+  transform: translate(0px, -10px);
+}
+
 .tab {
   display: inline;
   padding: 15px;
   font-weight: bold;
+}
+
+.tab a:hover {
+  text-decoration: none;
+  color: white;
 }
