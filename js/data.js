@@ -1,5 +1,5 @@
 /* API KEY value for breezometer data*/
-const BREEZE_API_KEY = "ENTER API KEY HERE";
+const BREEZE_API_KEY = "b1db2002f7464d81a9707fb36213a0c3";
 
 /* location constants */
 const UCLA_LAT = 34.0689;

@@ -2,6 +2,9 @@
   padding-top: 30px;
 }
 
+#prompt{
+  padding-bottom: 40px;
+}
 .campus {
   border: 1px solid white;
   background-color: transparent;
