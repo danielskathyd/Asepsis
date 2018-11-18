@@ -1,0 +1,17 @@
+.school-list {
+  padding-top: 30px;
+}
+
+.campus {
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 10px;
+  margin: 0px 500px 20px 500px;
+
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.campus:hover {
+  background-color: white;
+  color: #262647;
+}
