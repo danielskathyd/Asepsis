@@ -1,4 +1,4 @@
-/* API KEY value for airvisual data*/
+/* API KEY value for breezometer data*/
 const BREEZE_API_KEY = "ENTER KEY HERE";
 
 /* location constants */
