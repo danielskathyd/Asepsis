@@ -4,22 +4,50 @@ const GOOGLE_API_KEY = "AIzaSyAyHe7T4ihQEx_jvFqpq2-5qRZ915G0dnE";
 //map global variable--might move into initMap function later
 var map;
 
-//ucla location
-var markUCLA = {
-  lat: 34.070,
-  lng: -118.450
-};
+var markers = [];
+
+//map coordinates
+const UCLA_LAT = 34.0689;
+const UCLA_LNG = -118.4452;
+const UCD_LAT = 38.5382;
+const UCD_LNG = -121.7617;
+const UCB_LAT = 37.8719;
+const UCB_LNG = -122.2585;
+const UCI_LAT = 33.6405;
+const UCI_LNG = -117.8443;
+const UCM_LAT = 37.3642;
+const UCM_LNG = -120.4255;
+const UCR_LAT = 33.9737;
+const UCR_LNG = -117.3281;
+const UCSD_LAT = 32.8801;
+const UCSD_LNG = -117.2340;
+const UCSB_LAT = 34.4208;
+const UCSB_LNG = -119.6982;
+const UCSC_LAT = 36.9916;
+const UCSC_LNG = -122.0583;
+
+var campuses = [
+  ['UCLA', UCLA_LAT, UCLA_LNG, 9],
+  ['UCD', UCD_LAT, UCD_LNG, 8],
+  ['UCB', UCB_LAT, UCB_LNG, 7],
+  ['UCI', UCI_LAT, UCI_LNG, 6],
+  ['UCM', UCM_LAT, UCM_LNG, 5],
+  ['UCR', UCR_LAT, UCR_LNG, 4],
+  ['UCSD', UCSD_LAT, UCSD_LNG, 3],
+  ['UCSB', UCSB_LAT, UCSB_LNG, 2],
+  ['UCSC', UCSC_LAT, UCSC_LNG, 1],
+];
 
 //this function is automatically called when id=map object is created
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     //location of map center as it starts
     center: {
-      lat: 34.070,
-      lng: -118.450
+      lat: 36.011,
+      lng: -118.831
     },
     // zoom level (bigger number is more zoomed in)
-    zoom: 10,
+    zoom: 6,
     // all the styling stuff regarding the map JSON
     styles: [{
         "elementType": "geometry",
@@ -276,21 +304,22 @@ function setMarkers(map) {
          coords: [1, 1, 1, 20, 18, 20, 18, 1],
          type: 'poly'
        };
-       for (var i = 0; i < beaches.length; i++) {
-         var beach = beaches[i];
-         var marker = new google.maps.Marker({
-           position: {lat: beach[1], lng: beach[2]},
+       for (var i = 0; i < campuses.length; i++) {
+         var campus = campuses[i];
+         newMarker = new google.maps.Marker({
+           position: {lat: campus[1], lng: campus[2]},
            map: map,
            icon: image,
            shape: shape,
-           title: beach[0],
-           zIndex: beach[3]
+           title: campus[0],
+           zIndex: campus[3]
          });
-
+         markers.push(newMarker);
          //have all the buttons have this effect when clicked
-         marker.addListener('click', function() {
+         google.maps.event.addListener(newMarker,'click', function() {
+               map.setCenter(this.getPosition());
                map.setZoom(8);
-               map.setCenter(marker.getPosition());
-             });
-       }
+               
+        });
      }
+   }
