@@ -18,13 +18,10 @@
 
 .nav-list {
   padding-top: 17px;
-}
-
-ul {
   color: white;
 }
 
-li {
+.tab {
   display: inline;
   padding: 15px;
   font-weight: bold;
